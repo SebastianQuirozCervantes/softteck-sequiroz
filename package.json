@@ -1,0 +1,48 @@
+{
+  "name": "softtek-sequiroz",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "serverless offline",
+    "deploy": "serverless deploy"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.133",
+    "@types/jest": "^29.5.12",
+    "esbuild": "^0.19.12",
+    "jest": "^29.7.0",
+    "serverless-esbuild": "^1.51.0",
+    "serverless-offline": "^13.3.3",
+    "serverless-plugin-typescript": "^2.1.5",
+    "ts-jest": "^29.1.2",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.1550.0",
+    "axios": "^1.6.7",
+    "serverless-openapi-documentation": "^0.4.0",
+    "uuid": "^9.0.1"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node",
+    "moduleFileExtensions": [
+      "ts",
+      "js"
+    ],
+    "transform": {
+      "^.+\\.ts$": "ts-jest"
+    },
+    "roots": [
+      "<rootDir>/src"
+    ],
+    "testMatch": [
+      "**/__tests__/**/*.test.ts"
+    ]
+  }
+  
+}

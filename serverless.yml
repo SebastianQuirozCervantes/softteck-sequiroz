@@ -1,0 +1,54 @@
+service: softtek-sequiroz
+useDotenv: true
+provider: 
+  name: aws
+  runtime: nodejs14.x
+  iamRoleStatements: 
+    - Effect: Allow
+      Action:
+        - dynamodb:*
+      Resource: "arn:aws:dynamodb:us-east-1:964367866904:table/Criaturas"
+
+resources:
+  Resources:
+    Criaturas:
+      Type: AWS::DynamoDB::Table
+      Properties:
+        TableName: Criaturas
+        AttributeDefinitions:
+          - AttributeName: id 
+            AttributeType: S
+        KeySchema:
+          - AttributeName: id
+            KeyType: HASH
+        ProvisionedThroughput:
+          ReadCapacityUnits: 5
+          WriteCapacityUnits: 5
+          
+plugins:
+  - serverless-offline
+  - serverless-esbuild
+  - serverless-openapi-documentation
+
+functions:
+  getInformationByType:
+    handler: "src/functions/swapi.getInformationByType"
+    events:
+      - httpApi: GET /swapi/{type}
+
+  getInformationByTypeAndId:
+    handler: src/functions/swapi.getInformationByTypeAndId
+    events: 
+      - httpApi: GET /swapi/{type}/{id}
+  createCriatura:
+    handler: src/functions/sqServices.createCriatura
+    events:
+      - httpApi: POST /sqServices/criatura
+  getCriaturas:
+    handler: src/functions/sqServices.getCriaturas
+    events:
+      - httpApi: GET /sqlServices/criaturas
+  getCriaturaById:
+    handler: src/functions/sqServices.getCriaturaById
+    events:
+      - httpApi: GET /sqlServices/criatura/{id}
