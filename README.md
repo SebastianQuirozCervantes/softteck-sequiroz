@@ -65,5 +65,6 @@ Para desplegar el servicio en AWS:
   ### GET - https://hkr0zjxho8.execute-api.us-east-1.amazonaws.com/sqlServices/criatura/{id}
 
 ## Test
-
-### Los test se ejecutan con npx jest
+Para ejecutar los test:
+1. Ejecuta `npx jest`
+2. Ejecutará los test en la carpeta src/__tests__
