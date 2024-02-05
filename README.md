@@ -52,6 +52,7 @@ Para desplegar el servicio en AWS:
 ## Tecnologias usadas
 ### Node
 - Serverless
+- Jest
 ### AWS
 - DynamoDb
 - Lambda
@@ -62,3 +63,7 @@ Para desplegar el servicio en AWS:
   ### POST - https://hkr0zjxho8.execute-api.us-east-1.amazonaws.com/sqServices/criatura
   ### GET - https://hkr0zjxho8.execute-api.us-east-1.amazonaws.com/sqlServices/criaturas
   ### GET - https://hkr0zjxho8.execute-api.us-east-1.amazonaws.com/sqlServices/criatura/{id}
+
+## Test
+
+### Los test se ejecutan con npx jest
