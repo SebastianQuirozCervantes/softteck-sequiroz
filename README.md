@@ -58,11 +58,11 @@ Para desplegar el servicio en AWS:
 - Lambda
 
 ## Endpoints:
-  ### GET - https://hkr0zjxho8.execute-api.us-east-1.amazonaws.com/swapi/{type}
-  ### GET - https://hkr0zjxho8.execute-api.us-east-1.amazonaws.com/swapi/{type}/{id}
-  ### POST - https://hkr0zjxho8.execute-api.us-east-1.amazonaws.com/sqServices/criatura
-  ### GET - https://hkr0zjxho8.execute-api.us-east-1.amazonaws.com/sqlServices/criaturas
-  ### GET - https://hkr0zjxho8.execute-api.us-east-1.amazonaws.com/sqlServices/criatura/{id}
+1. GET - https://hkr0zjxho8.execute-api.us-east-1.amazonaws.com/swapi/{type}
+2. GET - https://hkr0zjxho8.execute-api.us-east-1.amazonaws.com/swapi/{type}/{id}
+3. POST - https://hkr0zjxho8.execute-api.us-east-1.amazonaws.com/sqServices/criatura
+4. GET - https://hkr0zjxho8.execute-api.us-east-1.amazonaws.com/sqlServices/criaturas
+5. GET - https://hkr0zjxho8.execute-api.us-east-1.amazonaws.com/sqlServices/criatura/{id}
 
 ## Test
 Para ejecutar los test:
